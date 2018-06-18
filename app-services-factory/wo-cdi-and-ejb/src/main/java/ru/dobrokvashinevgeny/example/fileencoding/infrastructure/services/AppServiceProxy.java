@@ -30,6 +30,7 @@ public class AppServiceProxy {
 				appService.executeUseCase();
 			} catch (AppServiceException e) {
 				session.rollbackTransaction();  // если были ошибки то откатываем транзакцию
+				throw new AppServiceProxyException(e);
 			} finally {
 				session.commitTransaction();   // подтверждаем транзакцию
 				session.close();                // освобождаем соединение
