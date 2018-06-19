@@ -8,7 +8,7 @@ package ru.dobrokvashinevgeny.example.fileencoding.infrastructure.configuration;
  * Класс AppConfiguration
  */
 public class AppConfiguration {
-	private String jdbcUrl;
+	private String jdbcUrl = "jdbc:h2:mem:test;MVCC=true";
 
 	public static AppConfiguration loadFromConfigFile(String locationConfigFile) throws AppConfigurationException {
 		//...
