@@ -13,6 +13,7 @@
 		<module>app-services-factory/wo-ejb-w-cdi</module>
 		<module>app-services-factory/wo-ejb-w-cdi-tomcat</module>
 		<module>app-services-factory/wo-ejb-w-cdi-w-jpa-tomcat</module>
+		<module>work-with-db/jpa</module>
 	</modules>
 
 	<properties>
@@ -30,6 +31,8 @@
 		<resteasy.version>3.1.4.Final</resteasy.version>
 		<hibernate.version>5.3.1.Final</hibernate.version>
         <logback.version>1.2.3</logback.version>
+		<log4j.verdion>1.2.17</log4j.verdion>
+		<slf4j.version>1.7.25</slf4j.version>
         <junit.version>4.12</junit.version>
         <hamcrest.version>1.3</hamcrest.version>
         <mockito.version>2.16.0</mockito.version>
@@ -114,9 +117,21 @@
 	        </dependency>
 
 	        <dependency>
+		        <groupId>org.hibernate</groupId>
+		        <artifactId>hibernate-entitymanager</artifactId>
+		        <version>${hibernate.version}</version>
+	        </dependency>
+
+	        <dependency>
 		        <groupId>com.h2database</groupId>
 		        <artifactId>h2</artifactId>
 		        <version>${h2.version}</version>
+	        </dependency>
+
+	        <dependency>
+		        <groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-api</artifactId>
+		        <version>${slf4j.version}</version>
 	        </dependency>
 
             <dependency>
@@ -124,6 +139,12 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
             </dependency>
+
+	        <dependency>
+		        <groupId>log4j</groupId>
+		        <artifactId>log4j</artifactId>
+		        <version>${log4j.verdion}</version>
+	        </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
