@@ -13,6 +13,7 @@
 		<module>app-services-factory/wo-ejb-w-cdi</module>
 		<module>app-services-factory/wo-ejb-w-cdi-tomcat</module>
 		<module>app-services-factory/wo-ejb-w-cdi-w-jpa-tomcat</module>
+		<module>app-services-factory/w-cdi-and-ejb-and-jpa-wildfly</module>
 		<module>work-with-db/jpa</module>
 	</modules>
 
